@@ -1,36 +1,221 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Realtime Coaching Feed Frontend
 
-## Getting Started
+A modern realtime coaching feed dashboard built using Next.js, Tailwind CSS, Socket.IO Client, and Cloudinary.
 
-First, run the development server:
+Users receive coaching updates instantly without refreshing the page.
+
+---
+
+# Features
+
+- Modern responsive UI
+- Realtime updates with Socket.IO
+- Image-based feed cards
+- Cloudinary image rendering
+- Optimized Next.js Image component
+- Loading states
+- Error handling
+- Toast notifications
+- Admin dashboard
+- Responsive layout
+- Duplicate realtime event prevention
+- Production-ready frontend architecture
+
+---
+
+# Tech Stack
+
+- Next.js 15
+- React
+- Tailwind CSS
+- Socket.IO Client
+- Axios
+- React Hot Toast
+- Date-fns
+
+---
+
+# Pages
+
+## Home Page
+
+Displays:
+- Realtime coaching updates
+- Feed cards
+- Uploaded images
+- Relative timestamps
+
+---
+
+## Admin Page
+
+Allows:
+- Feed creation
+- Image upload
+- Realtime broadcasting
+
+---
+
+# Project Structure
+
+```bash
+src/
+│
+├── app/
+│   ├── admin/
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+│
+├── components/
+│   ├── FeedCard.jsx
+│   ├── FeedList.jsx
+│   ├── Loader.jsx
+│   └── Navbar.jsx
+│
+├── services/
+│   └── api.js
+│
+├── socket/
+│   └── socket.js
+│
+└── hooks/
+```
+
+---
+
+# Architecture
+
+```bash
+Next.js Frontend
+        ↓
+Socket.IO + REST APIs
+        ↓
+Express Backend
+        ↓
+MongoDB + Redis + Cloudinary
+```
+
+---
+
+# Environment Variables
+
+Create `.env.local`
+
+```env
+NEXT_PUBLIC_API_URL=
+```
+
+Example:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-backend.onrender.com
+```
+
+---
+
+# Installation
+
+```bash
+npm install
+```
+
+---
+
+# Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# Realtime Socket Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+User opens application
+        ↓
+Socket.IO connects to backend
+        ↓
+Admin posts new feed
+        ↓
+Backend emits socket event
+        ↓
+Frontend updates instantly
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# UI Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Responsive design
+- Mobile-friendly layout
+- Optimized image loading
+- Realtime toast notifications
+- Modern dashboard UI
+- Animated hover effects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# Image Optimization
+
+Uses:
+- Next.js Image component
+- Cloudinary CDN
+- Lazy loading
+- Responsive image sizing
+
+---
+
+# Realtime Features
+
+- Automatic socket reconnect
+- Duplicate event prevention
+- Instant UI updates
+- Live notifications
+
+---
+
+# Deployment
+
+## Frontend Deployment
+- Vercel
+
+## Backend
+- Render
+
+---
+
+# Production Improvements
+
+- Environment-based API config
+- Optimized image rendering
+- Responsive layout
+- Error handling
+- Loading indicators
+- Modern component architecture
+
+---
+
+# Future Improvements
+
+- Authentication
+- Dark mode
+- Infinite scrolling
+- Feed filters
+- Search functionality
+- Push notifications
+
+---
+
+# Author
+
+Samanvith
